@@ -7,12 +7,6 @@ This repository serves as a central collection of my Android development work, c
 ## Projects
 
 Each project is maintained in its own directory within this repository.
-
-| Project                    | Description                                                                                   |
-| -------------------------- | --------------------------------------------------------------------------------------------- |
-| [Calculator](./Calculator) | A basic calculator application developed as part of Android application development practice. |
-| [HelloWorld](./HelloWorld) | A simple introductory Android application.                                                    |
-
 More projects will be added as development and coursework progresses.
 
 ## Technologies
