@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -12,48 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter 1st no"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="157dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter 2nd no"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="222dp" />
-
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="335dp" />
-
-    <Button
-        android:id="@+id/btnSum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SUM"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="335dp" />
-
-    <Button
-        android:id="@+id/btnDiv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DIV"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="431dp" />
-
-    <Button
-        android:id="@+id/btnMul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MUL"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="431dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="100dp" />
 
     <EditText
         android:id="@+id/editNum1"
@@ -61,8 +24,18 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="146dp" />
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toTopOf="@id/textView"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter 2nd no"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginTop="50dp" />
 
     <EditText
         android:id="@+id/editNum2"
@@ -70,7 +43,55 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintStart_toEndOf="@id/textView2"
+        app:layout_constraintTop_toTopOf="@id/textView2"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editNum2"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="SUB"
+        app:layout_constraintStart_toEndOf="@id/btnAdd"
+        app:layout_constraintTop_toTopOf="@id/btnAdd"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="DIV"
+        app:layout_constraintStart_toStartOf="@id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="MUL"
+        app:layout_constraintStart_toStartOf="@id/btnSub"
+        app:layout_constraintTop_toBottomOf="@id/btnSub"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/txtAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANSWER"
+        app:layout_constraintTop_toBottomOf="@id/btnDiv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
